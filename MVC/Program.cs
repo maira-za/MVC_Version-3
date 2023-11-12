@@ -3,7 +3,6 @@ using System.Data.Entity;
 using System.Data.Entity.Migrations.Model;
 using System.Diagnostics;
 
-Console.WriteLine("Hello, World!");
 using (var context = new MyDbContext())
 {
     // 1. Create (Add new Students)
@@ -187,7 +186,7 @@ public class Course
     public virtual ICollection<Enrollment>? Enrollments { get; set; }
 }
 
-public class MyDbContext : DbContext
+public class MyDbContext: DbContext
 {
     public virtual DbSet<Course>? Courses { get; set; }
     public virtual DbSet<Enrollment>? Enrollments { get; set; }
